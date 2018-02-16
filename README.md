@@ -1,1 +1,7 @@
 # carltonprojdemo
+
+## server 
+ 
+ ```npm install```
+
+ 
