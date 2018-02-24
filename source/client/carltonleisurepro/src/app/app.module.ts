@@ -45,7 +45,6 @@ const appRoutes: Routes =  [
     SupportComponent,
     ContactusComponent,
     SearchengineflightsComponent
-
   ],
   imports: [
     BrowserModule,
