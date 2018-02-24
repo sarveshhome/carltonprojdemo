@@ -18,13 +18,18 @@ import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { SupportComponent } from './components/support/support.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { SearchengineflightsComponent } from './components/searchengineflights/searchengineflights.component';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
+  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path:'aboutus',component: AboutusComponent}
 ]
 
 @NgModule({
@@ -35,8 +40,11 @@ const appRoutes: Routes =  [
     RegisterComponent,
     DashboardComponent,
     LoginComponent,
-    ProfileComponent
-
+    ProfileComponent,
+    AboutusComponent,
+    SupportComponent,
+    ContactusComponent,
+    SearchengineflightsComponent
   ],
   imports: [
     BrowserModule,

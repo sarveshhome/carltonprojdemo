@@ -1,0 +1,14 @@
+.logo {
+    width: 210px;
+    height: 29px;
+    float: left;
+    padding: 0px;
+    margin-right: 1em;
+    text-indent: -9999px;
+    background: url(https://www.carltonleisure.com/pictures/logo_header.png) no-repeat;
+    cursor: pointer;
+}
+
+.bg-carlton {
+    background-color: #28a745!important;
+}
