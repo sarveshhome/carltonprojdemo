@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchengineflightsComponent implements OnInit {
   constructor() {
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("myList").style.display = "block";
-    });
+
    }
   ngOnInit() {
   }

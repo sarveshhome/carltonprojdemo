@@ -1,0 +1,1222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href="styles/bootstrap.css" rel="stylesheet" />
+<link href="font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet" />
+<link href="styles/common.css" rel="stylesheet" />
+<link href="styles/owl.carousel.css" rel="stylesheet" />
+<link href="styles/owl.theme.css" rel="stylesheet" />
+<link href="styles/animated.css" rel="stylesheet" />
+<link href="styles/home2.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/owl.carousel.js" type="text/javascript"></script>
+<script language="javascript">
+	function openFunction() {
+	   $("#divOverlay").show();
+       $("#res-menu").addClass("opened");
+	}
+	function closeFunction() {
+		$("#divOverlay").hide();
+        $("#res-menu").removeClass("opened");
+	}
+	
+	$(document).ready(function(){	
+	$("#divOverlay").on("click",function(){
+		$(this).hide();
+		       $("#res-menu").removeClass("opened");
+		});	
+		
+		//owl carousel slider
+		var owl = $("#banner-slider");
+                owl.owlCarousel({
+                autoPlay: false,
+				singleItem : true,
+				items: 1,
+                slideSpeed : 1000,
+				paginationSpeed : 800,
+				rewindSpeed : 1000,
+                navigation: false,
+                touchDrag: false,
+                mouseDrag: true,
+                pagination: true,
+				autoHeight : false
+				//transitionStyle : "fade"
+            });
+			
+			//owl Recent slider
+		var owl = $("#recent-slider");
+                owl.owlCarousel({
+                autoPlay: false,
+                items: 2,
+				itemsDesktop : [1000,2],
+				itemsDesktopSmall : [900,2],
+				itemsTablet: [600,1],
+                navigationText: false,
+                navigation: true,
+                touchDrag: false,
+                mouseDrag: false,
+                pagination: false
+            });
+			var owl = $("#whybook-slider");
+                owl.owlCarousel({
+                autoPlay: false,
+                items: 3,
+				itemsDesktop : [1000,3],
+				itemsDesktopSmall : [900,2],
+				itemsTablet: [600,1],
+                navigationText: false,
+                navigation: false,
+                touchDrag: false,
+                mouseDrag: false,
+                pagination: true
+            });
+			$(".owl-prev").removeClass("fa-caret-left").addClass("fa-chevron-left");
+			$(".owl-next").removeClass("fa-caret-right").addClass("fa-chevron-right");		
+			
+				var owl = $("#destination-slider");
+					owl.owlCarousel({
+					autoPlay: false,
+					items: 3,
+					margin:10,
+					itemsDesktop : [979,3],
+					itemsDesktopSmall : [768,2],
+					itemsTablet: [480,1],
+					navigationText: false,
+					navigation: false,
+					touchDrag: false,
+					mouseDrag: false,
+					pagination: true
+				});
+				
+			});
+			
+		$(function() {
+			
+			//cabin_class			
+			$("#cabin_class").on("click", function() {
+				$("#cabin_list").css("display","block");
+			});
+			$("#cabin_list ul li").on("click", function() {
+				$("#cabin_list").css("display","none");				
+				
+				$("#cabin_class span").html($(this).attr("data-text"));
+			});
+			
+			//mopt
+			$("#mopt").on("click", function() {
+				$("#mopt_list").css("display","block");
+			});
+			$("#mopt_list button").on("click", function() {
+				$("#mopt_list").css("display","none");
+			});
+			
+			//mob-tab
+			$("#mob-tab").on("click", function() {
+				$("#mob-tab_list").css("display","block");
+			});
+			$("#mob-tab_list .close, a").on("click", function() {
+				$("#mob-tab_list").css("display","none");
+			});
+			
+			//pax-content
+			$("#pax-content").on("click", function() {
+				$("#pax-detail").css("display","block");				
+			});
+			$("#pax-detail .close-butt").on("click", function() {
+				$("#pax-detail").css("display","none");				
+			});
+			
+			//$("#pax-detail").addClass("bounceIndown");
+				//$("#pax-detail").removeClass("bounceInUp");	
+			
+			
+			$("#fh-pax-content").on("click", function() {
+				$("#fh-pax-detail").css("display","block");
+			});
+			$("#fh-pax-detail .close-butt").on("click", function() {
+				$("#fh-pax-detail").css("display","none");
+			});
+			
+			$("#mpax-content").on("click", function() {
+				$("#mpax-detail").css("display","block");				
+			});
+			$("#mpax-detail .close-butt").on("click", function() {
+				$("#mpax-detail").css("display","none");				
+			});
+				
+		  $(".button").on("click", function() {
+			var $button = $(this);
+			var oldValue = $button.parent().find("input").val();
+		
+			if ($button.children("i").hasClass("fa-plus")) {
+			  var newVal = parseFloat(oldValue) + 1;
+			} else {
+			   // Don't allow decrementing below zero
+			  if (oldValue > 0) {
+				var newVal = parseFloat(oldValue) - 1;
+				} 
+				else {
+					newVal = 0;
+				}
+			  }
+			$button.parent().find("input").val(newVal);
+		  });
+		});
+		
+		
+			
+			$( window ).resize(function() {
+				 var ht = $("#be-panel").innerHeight();
+				 if($(window).width() <= 610)
+				 {
+					  $("#be-panel").css("margin-top", 20);
+				 }
+				 else{
+					 $("#be-panel").css("margin-top", -ht);
+				 }				 
+			});
+			
+	
+</script>
+</head>
+
+<body>
+<div id="divOverlay" class="overlay"></div>
+<div class="container-fluids">
+  <header>
+    <div class="header-top">
+      <div class="center-container">
+        <div class="top-nav-right">
+          <div class="top-link"> <a href="https://www.carltonleisure.com/about-us.aspx" title="About Carlton Leisure">About Us</a><span>|</span><a href="https://www.carltonleisure.com/contact-us.aspx" title="Contact us">Contact Us</a><span>|</span><a href="https://www.carltonleisure.com/careers.aspx" title="Careers">Careers</a> </div>
+          <div class="live-chat"><a href="#" onclick="Comm100API.open_chat_window(event, 5000010);"><i class="fa fa-comments"></i>Live Chat</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="center-container">
+        <div class="navbar">
+          <div class="logo-container">
+            <button type="button" class="res-button" id="res-btn" onclick="openFunction();"><i class="fa fa-bars"></i></button>
+            <div class="res-menu" id="res-menu">
+              <div class="top-menu">
+                <div class="home"><a href="https://www.carltonleisure.com/" title="Cheap flights with Carlton Leisure"><i class="fa fa-home"></i>Home</a></div>
+                <div class="closes" onclick="closeFunction();">Close</div>
+              </div>
+              <ul class="res-nav">
+                <li><a href="https://www.carltonleisure.com/travel/flights/">Flights</a></li>
+                <li><a href="https://www.carltonleisure.com/hotels/hotel.aspx">Hotels</a></li>
+                <li><a href="https://www.carltonleisure.com/holidays/">Holidays</a></li>
+                <li><a href="https://www.carltonleisure.com/carhire/">Car hire</a></li>
+                <li><a href="https://www.carltonleisure.com/airlines/">Airlines</a></li>
+                <li><a href="#">Travel Extras</a></li>
+                <li><a href="https://www.carltonleisure.com/about-us.aspx">About us</a></li>
+                <li><a href="https://www.carltonleisure.com/contact-us.aspx">Contact us</a></li>
+              </ul>
+            </div>
+            <a href="https://www.carltonleisure.com">
+            <div class="logo">Carlton Leisure</div>
+            </a> </div>
+          <div class="main-nav">
+            <nav class="nav">
+              <ul>
+                <li><a href="https://www.carltonleisure.com/" title="Cheap flights with Carlton Leisure" class="active">Home</a></li>
+                <li><a href="https://www.carltonleisure.com/travel/flights/" title="Cheap flights tickets to Worldwide destinations">Flights</a>
+                  <ul class="dropmenu">
+                    <li><a title="Cheap flights tickets to Worldwide destinations" href="https://www.carltonleisure.com/travel/flights/">Economy</a></li>
+                    <li><a href="https://www.carltonleisure.com/travel/flights/business-class/">Business Class Flights</a></li>
+                    <li><a href="https://www.carltonleisure.com/travel/flights/first-class/">First Class Flights</a></li>
+                    <li><a href="https://www.carltonleisure.com/travel/flights/group-travel/">Group Travel</a></li>
+                    <li><a href="https://www.carltonleisure.com/flights/multicity.aspx">Multi-City Search</a></li>
+                    <li><a href="https://www.carltonleisure.com/flights/online-check-in.aspx">Online-Check-In</a></li>
+                  </ul>
+                </li>
+                <li><a title="Book Cheap hotels with Carlton Leisure" href="https://www.carltonleisure.com/hotels/hotel.aspx">Hotels</a></li>
+                <li><a title="Flight + Hotel" href="https://www.carltonleisure.com/holidays/">Holidays</a>
+                  <ul class="dropmenu">
+                    <li><a title="Flight + Hotel" href="https://www.carltonleisure.com/holidays/">Flight + Hotel</a></li>
+                    <li><a href="http://tours.carltonleisure.com/" target="_blank" title="Luxury Tour Packages">Luxury Tours</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://www.carltonleisure.com/carhire/">Car Hire</a></li>
+                <li><a href="https://www.carltonleisure.com/airlines/">Airlines</a>
+                  <ul class="dropmenu">
+                    <li><a href="https://www.carltonleisure.com/airlines/british-airways/" title="Special Deals with British Airways">British Airways</a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/emirates-airways/" title="Special Deals with Emirates Airways">Emirates Airways</a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/etihad-airways/" title="Special Deals with Etihad Airways">Etihad Airways</a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/tam-airlines/" title="Special Deals with TAM Airlines">TAM Airlines </a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/qatar-airways/" title="Special Deals with Qatar Airways">Qatar Airways </a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/south-african-airways/" title="Special Deals South African Airways">South African Airways </a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/turkish-airlines/" title="Special Deals with Turkish Airlines">Turkish Airlines</a></li>
+                    <li><a href="https://www.carltonleisure.com/airlines/" title="More Special Airlines Deals">All Airlines</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Travel Extras</a>
+                  <ul class="dropmenu">
+                    <li><a title="Travel Insurance at unbelievable price" href="https://www.carltonleisure.com/insurance.aspx">Insurance</a></li>
+                    <li><a title="Travel News" href="https://www.carltonleisure.com/news/">News</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="number-content">
+          <div class="call"><i class="fa fa-phone-square"></i>Call us on: 0208 100 0000</div>
+          <div class="time"><i class="fa fa-clock-o"></i>Mon-Sat: 0800-2300 | Sun 0900-2200</div>
+        </div>
+        <div class="number-content_res"><a href="tel:+4402081000000"><i class="fa fa-phone-square"></i></a></div>
+      </div>
+    </div>
+  </header>
+</div>
+<section class="search-engine-section">
+  <div class="slider-area">
+    <div id="banner-slider" class="owl-carousel">
+      <div class="slider-img" style="background-image:url(images/flight_banner2.jpg);"></div>
+      <div class="slider-img" style="background-image:url(images/hotel_banner2.jpg);"></div>
+      <div class="slider-img" style="background-image:url(images/home-banner.jpg);"></div>
+      <!--<div class="item"><img src="images/flight_banner.jpg" ></div>
+      <div class="item"><img src="images/hotel_banner.jpg" ></div>--> 
+    </div>
+  </div>
+  <div class="booking-engine">
+    <div class="se-fixed-width">
+      <div class="be-container" id="be-panel">
+        <ul class="booking-engine-tabs clearfix">
+          <li class="active"><a href="#flight-panel" data-toggle="tab"> <i class="fa fa-plane"></i> <span>Flights</span> </a> </li>
+          <li><a href="#hotel-panel" data-toggle="tab"> <i class="fa fa-bed"></i> <span>Hotels</span> </a> </li>
+          <li><a href="#flightnhotel" data-toggle="tab"> <i class="fa fa-plane"></i> <i class="fa fa-bed"></i> <span>Flight + Hotel</span> </a> </li>
+          <li class="disabled"><a href="#car-panel" data-toggle="tab"> <i class="fa fa-car"></i> <span>Cars</span> </a> </li>
+          <li class="disabled"><a href="#insurance-panel" data-toggle="tab"> <i class="fa fa-umbrella"></i> <span>Insurance</span> </a> </li>
+          <li class="disabled"><a href="#multicity" data-toggle="tab"> <i class="fa fa-recycle"></i> <span>Multicity</span> </a> </li>
+          <li class="mob_tab-arrow dropdown" id="mob-tab"><a href="#"> <i class="fa fa-ellipsis-v"></i> </a></li>
+          <div class="mob_dropdown" id="mob-tab_list">
+            <div class="close"><i class="fa fa-close"></i></div>
+            <a href="#car-panel" data-toggle="tab"><i class="fa fa-car"></i> Cars</a> 
+			<a href="#insurance-panel" data-toggle="tab"><i class="fa fa-umbrella"></i> Insurance</a> 
+			<a href="#multicity" data-toggle="tab"><i class="fa fa-recycle"></i> Multicity</a> 
+		 </div>
+        </ul>
+        <div class="booking-engine-content tab-content be-min_height">
+          <div class="flight_frm-wrapper tab-pane fade in active" id="flight-panel">
+            <div class="flight-type"> <span class="radios">
+              <input name="ftype" type="radio" value="" id="return">
+              <label for="return">Return</label>
+              </span> <span class="radios">
+              <input name="ftype" type="radio" value="" id="oneway">
+              <label for="oneway">One way</label>
+              </span> </div>
+            <div class="flight-details">
+              <ul class="flight-frm-wrap">
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Flying from">
+                </li>
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Going from">
+                </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Depart">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Return">
+                  <span class="fa fa-calendar"></span> </li>
+              </ul>
+              <div class="bottom-section">
+                <div class="pax-contents">
+                  <div class="pax-container" id="pax-content"> <span>1 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                  <div class="dropdown-section animated slideInDown" id="pax-detail">
+                    <ul class="travellers-area">
+                      <li>
+                        <label>Adults (12+)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtAdults" value="1">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                      <li>
+                        <label>Children (2-12)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtChilds" value="0">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                      <li>
+                        <label>Infants (0-2)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtInfants" value="0">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="close-section">
+                      <button class="close-butt">Close</button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="more-options">
+                  <li>
+                    <div id="cabin_class" class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                    <div class="dropdown-section" id="cabin_list">
+                      <ul class="cabin-list">
+                        <li data-text="Economy"  data-val="M"><a href="#">Economy</a></li>
+                        <li data-text="Premium Economy"  data-val="W"><a href="#">Premium Economy</a></li>
+                        <li data-text="Business"  data-val="C"><a href="#">Business</a></li>
+                        <li data-text="First Class"  data-val="F"><a href="#">First Class</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="mopt" id="mopt"> <span>more options</span> <i class="fa fa-angle-down"></i> </div>
+                    <div class="dropdown-section" id="mopt_list">
+                      <div class="airlnes">
+                        <select name="">
+                          <option value="all">All Airlines</option>
+                          <option value="EI">Aer Lingus</option>
+                          <option value="AR">Aerolineas Argentinas</option>
+                          <option value="AB">Air Berlin</option>
+                          <option value="AC">Air Canada</option>
+                          <option value="CA">Air China</option>
+                          <option value="UX">Air Europa Lineas Aereas</option>
+                          <option value="AF">Air France</option>
+                          <option value="AI">Air India</option>
+                          <option value="JM">Air Jamaica</option>
+                          <option value="KM">Air Malta</option>
+                          <option value="MK">Air Mauritius</option>
+                          <option value="SW">Air Namibia</option>
+                          <option value="NZ">Air New Zealand</option>
+                          <option value="HM">Air Seychelles</option>
+                          <option value="AZ">Alitalia</option>
+                          <option value="AA">American Airlines</option>
+                          <option value="NH">ANA</option>
+                          <option value="OZ">Asiana Airlines</option>
+                          <option value="OS">Austrian Airlines</option>
+                          <option value="BA">British Airways</option>
+                          <option value="SN">Brussels Airlines</option>
+                          <option value="BW">Caribbean Airlines</option>
+                          <option value="CX">Cathay Pacific Airways</option>
+                          <option value="CI">China Airlines</option>
+                          <option value="MU">China Eastern Airlines</option>
+                          <option value="CZ">China Southern</option>
+                          <option value="CO">Continental Airlines</option>
+                          <option value="CY">Cyprus Airways</option>
+                          <option value="OK">Czech Airlines</option>
+                          <option value="DL">Delta Airlines</option>
+                          <option value="MS">Egypt Air</option>
+                          <option value="EK">Emirates Airways</option>
+                          <option value="OV">Estonian Air</option>
+                          <option value="ET">Ethiopian Airlines</option>
+                          <option value="EY">Etihad Airways</option>
+                          <option value="BR">EVA Air</option>
+                          <option value="AY">Finnair</option>
+                          <option value="BE">FlyBe</option>
+                          <option value="GA">Garuda Indonesia</option>
+                          <option value="GF">Gulf Air</option>
+                          <option value="IB">Iberia Airlines </option>
+                          <option value="FI">IcelandAir</option>
+                          <option value="JL">Japan Airlines</option>
+                          <option value="9W">Jet Airways</option>
+                          <option value="KL">KLM Royal Dutch Airlines</option>
+                          <option value="KE">Korean Air</option>
+                          <option value="KU">Kuwait Airways</option>
+                          <option value="LA">LAN Airlines</option>
+                          <option value="LO">LOT Polish Airlines</option>
+                          <option value="LH">Lufthansa</option>
+                          <option value="MH">Malaysia Airlines</option>
+                          <option value="ZB">Monarch Airlines</option>
+                          <option value="NW">Northwest Airlines</option>
+                          <option value="OA">Olympic Airlines</option>
+                          <option value="WY">Oman Air</option>
+                          <option value="QF">Qantas Airways</option>
+                          <option value="QR">Qatar Airways</option>
+                          <option value="AT">Royal Air Maroc</option>
+                          <option value="BI">Royal Brunei Airlines</option>
+                          <option value="RJ">Royal Jordanian</option>
+                          <option value="SK">SAS - Scandinavian Airlines</option>
+                          <option value="SQ">Singapore Airlines</option>
+                          <option value="SA">South African Airways</option>
+                          <option value="UL">SriLankan Airlines</option>
+                          <option value="LX">Swiss Airlines</option>
+                          <option value="JJ">TAM Airlines</option>
+                          <option value="TP">TAP Portugal</option>
+                          <option value="TG">Thai Airways</option>
+                          <option value="TK">Turkish Airlines</option>
+                          <option value="PS">Ukraine Intl.</option>
+                          <option value="UA">United Airlines</option>
+                          <option value="US">US Airways</option>
+                          <option value="HY">Uzbekistan Airways</option>
+                          <option value="RG">Varig Brazilian</option>
+                          <option value="VN">Vietnam Airlines</option>
+                          <option value="VS">Virgin Atlantic</option>
+                          <option value="VG">VLM Airlines</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i></div>
+                      <div class="dflexibility">
+                        <select name="">
+                          <option value="any">My dates are fixed</option>
+                          <option value="M">My dates are flexible +/- 3 days</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i> </div>
+                      <button class="done_btn">Done</button>
+                    </div>
+                  </li>
+                  <li class="desk-view">
+                    <div class="checkbox">
+                      <input id="terms" name="" type="checkbox" value="" class="check" />
+                      <label for="terms">Direct flights only</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="tab_view">
+                  <div class="checkbox">
+                    <input id="termss" name="" type="checkbox" value="" class="check" />
+                    <label for="termss">Direct flights only</label>
+                  </div>
+                </div>
+                <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel_frm-wrapper tab-pane fade" id="hotel-panel">
+            <ul class="hotel-frm-wrap">
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Enter your destination">
+              </li>
+              <li class="date_column">
+                <input name="" type="text" placeholder="Depart">
+                <span class="fa fa-calendar"></span> </li>
+              <li class="date_column">
+                <input name="" type="text" placeholder="Return">
+                <span class="fa fa-calendar"></span> </li>
+            </ul>
+            <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+          </div>
+          <div class="fl-hotel_frm-wrapper tab-pane fade" id="flightnhotel">
+            <div class="flight_hotel-details">
+              <ul class="flight_hotel-frm-wrap">
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Flying from">
+                </li>
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Going from">
+                </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Depart">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Return">
+                  <span class="fa fa-calendar"></span> </li>
+              </ul>
+              <div class="bottom-section">
+                <div class="pax-contents">
+                  <div class="pax-container" id="fh-pax-content"> <span>1 Room : 2 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                  <div class="dropdown-section" id="fh-pax-detail">
+                    <ul class="travellers-area">
+                      <li>
+                        <label>Adults (12+)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtAdults" value="1">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                      <li>
+                        <label>Children (2-12)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtChilds" value="0">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                      <li>
+                        <label>Infants (0-2)</label>
+                        <div class="numbers-row">
+                          <div class="dec button"><i class="fa fa-minus"></i></div>
+                          <input type="text" name="" id="txtInfants" value="0">
+                          <div class="inc button"><i class="fa fa-plus"></i></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="close-section">
+                      <button class="close-butt">Close</button>
+                    </div>
+                  </div>
+                  <div class="add-rooms"><i class="fa fa-plus"></i> Add a room</div>
+                </div>
+                <ul class="more-options">
+                  <li>
+                    <div class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                  </li>
+                  <li>
+                    <div class="alines"><span>Airlines</span> <i class="fa fa-angle-down"></i></div>
+                  </li>
+                  <li class="desk-view">
+                    <div class="checkbox">
+                      <input id="terms" name="" type="checkbox" value="" class="check" />
+                      <label for="terms">Direct flights only</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="tab_view">
+                  <div class="checkbox">
+                    <input id="termss" name="" type="checkbox" value="" class="check" />
+                    <label for="termss">Direct flights only</label>
+                  </div>
+                </div>
+                <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="car_frm-wrapper tab-pane fade" id="car-panel">
+            <div class="res-heading">Car Hire</div>
+            <div class="car-details">
+              <ul class="car-frm-wrap">
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Flying from">
+                </li>
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Going from">
+                </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Depart">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="time_column">
+                  <select name="">
+                    <option value="">10:00</option>
+                  </select>
+                  <i class="fa fa-angle-down"></i> </li>
+                <li class="date_column2">
+                  <input name="" type="text" placeholder="Return">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="time_column">
+                  <select name="">
+                    <option value="">10:00</option>
+                  </select>
+                  <i class="fa fa-angle-down"></i> </li>
+              </ul>
+              <div class="bottom-section">
+                <div class="left-section">
+                  <div class="rlocation">
+                    <div class="checkbox">
+                      <input id="dlocation" name="" type="checkbox" value="" class="check" checked="checked" />
+                      <label for="dlocation">Return to a different location</label>
+                    </div>
+                  </div>
+                  <div class="driver_age">
+                    <div class="checkbox">
+                      <input id="dage" name="" type="checkbox" value="" class="check" />
+                      <label for="dage">Driver aged between 25-70</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="insurance_frm-wrapper tab-pane fade" id="insurance-panel">
+            <div class="res-heading">Travel Insurance</div>
+            <div class="insurance-details">
+              <ul class="insurance-frm-wrap">
+                <li> <i class="fa fa-map-marker"></i>
+                  <input name="" type="text" placeholder="Enter your destination">
+                </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Depart">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="date_column">
+                  <input name="" type="text" placeholder="Return">
+                  <span class="fa fa-calendar"></span> </li>
+                <li class="not">
+                  <label>No. of Travellers</label>
+                  <div class="numbers-row">
+                    <div class="dec button"><em class="fa fa-minus"></em></div>
+                    <input type="text" name="" id="txtAdults" value="1">
+                    <div class="inc button"><em class="fa fa-plus"></em></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="bottom-section">
+                <div class="not">
+                  <label>No. of Travellers</label>
+                  <div class="numbers-row">
+                    <div class="dec button"><em class="fa fa-minus"></em></div>
+                    <input type="text" name="" id="txtAdults" value="1">
+                    <div class="inc button"><em class="fa fa-plus"></em></div>
+                  </div>
+                </div>
+                <ul class="dob-container">
+                  <label>Date Of Birth</label>
+                  <li>
+                    <input name="" type="text" placeholder="1st Traveller">
+                    <span class="fa fa-calendar"></span> </li>
+                  <li>
+                    <input name="" type="text" placeholder="2nd Traveller">
+                    <span class="fa fa-calendar"></span> </li>
+                </ul>
+                <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="mc_frm-wrapper tab-pane fade" id="multicity">
+            <ul class="mc-frm-wrap">
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Flying from">
+              </li>
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Going from">
+              </li>
+              <li class="date_column">
+                <input name="" type="text" placeholder="Depart">
+                <span class="fa fa-calendar"></span> </li>
+            </ul>
+            <ul class="mc-frm-wrap">
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Flying from">
+              </li>
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Going from">
+              </li>
+              <li class="date_column">
+                <input name="" type="text" placeholder="Depart">
+                <span class="fa fa-calendar"></span> </li>
+            </ul>
+            <ul class="mc-frm-wrap">
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Flying from">
+              </li>
+              <li> <i class="fa fa-map-marker"></i>
+                <input name="" type="text" placeholder="Going from">
+              </li>
+              <li class="date_column">
+                <input name="" type="text" placeholder="Depart">
+                <span class="fa fa-calendar"></span> </li>
+              <li class="close_column"> <i class="fa fa-times"></i> </li>
+            </ul>
+            <div class="add-flights"> <i class="fa fa-plus"></i> add another flight </div>
+            <div class="bottom-section">
+              <div class="pax-contents">
+                <div class="pax-container" id="mpax-content"> <span>1 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                <div class="dropdown-section animated slideInDown" id="mpax-detail">
+                  <ul class="travellers-area">
+                    <li>
+                      <label>Adults (12+)</label>
+                      <div class="numbers-row">
+                        <div class="dec button"><i class="fa fa-minus"></i></div>
+                        <input type="text" name="" id="txtAdults" value="1">
+                        <div class="inc button"><i class="fa fa-plus"></i></div>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Children (2-12)</label>
+                      <div class="numbers-row">
+                        <div class="dec button"><i class="fa fa-minus"></i></div>
+                        <input type="text" name="" id="txtChilds" value="0">
+                        <div class="inc button"><i class="fa fa-plus"></i></div>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Infants (0-2)</label>
+                      <div class="numbers-row">
+                        <div class="dec button"><i class="fa fa-minus"></i></div>
+                        <input type="text" name="" id="txtInfants" value="0">
+                        <div class="inc button"><i class="fa fa-plus"></i></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="close-section">
+                    <button type="button" class="close-butt">Close</button>
+                  </div>
+                </div>
+              </div>
+              <ul class="more-options">
+                <li>
+                  <div id="cabin_class" class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                  <div class="dropdown-section" id="cabin_list">
+                    <ul class="cabin-list">
+                      <li data-text="Economy"  data-val="M"><a href="#">Economy</a></li>
+                      <li data-text="Premium Economy"  data-val="W"><a href="#">Premium Economy</a></li>
+                      <li data-text="Business"  data-val="C"><a href="#">Business</a></li>
+                      <li data-text="First Class"  data-val="F"><a href="#">First Class</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="airlnes">
+                  <select name="">
+                    <option value="all">All Airlines</option>
+                    <option value="EI">Aer Lingus</option>
+                    <option value="AR">Aerolineas Argentinas</option>
+                    <option value="AB">Air Berlin</option>
+                    <option value="AC">Air Canada</option>
+                    <option value="CA">Air China</option>
+                    <option value="UX">Air Europa Lineas Aereas</option>
+                    <option value="AF">Air France</option>
+                    <option value="AI">Air India</option>
+                    <option value="JM">Air Jamaica</option>
+                    <option value="KM">Air Malta</option>
+                    <option value="MK">Air Mauritius</option>
+                    <option value="SW">Air Namibia</option>
+                    <option value="NZ">Air New Zealand</option>
+                    <option value="HM">Air Seychelles</option>
+                    <option value="AZ">Alitalia</option>
+                    <option value="AA">American Airlines</option>
+                    <option value="NH">ANA</option>
+                    <option value="OZ">Asiana Airlines</option>
+                    <option value="OS">Austrian Airlines</option>
+                    <option value="BA">British Airways</option>
+                    <option value="SN">Brussels Airlines</option>
+                    <option value="BW">Caribbean Airlines</option>
+                    <option value="CX">Cathay Pacific Airways</option>
+                    <option value="CI">China Airlines</option>
+                    <option value="MU">China Eastern Airlines</option>
+                    <option value="CZ">China Southern</option>
+                    <option value="CO">Continental Airlines</option>
+                    <option value="CY">Cyprus Airways</option>
+                    <option value="OK">Czech Airlines</option>
+                    <option value="DL">Delta Airlines</option>
+                    <option value="MS">Egypt Air</option>
+                    <option value="EK">Emirates Airways</option>
+                    <option value="OV">Estonian Air</option>
+                    <option value="ET">Ethiopian Airlines</option>
+                    <option value="EY">Etihad Airways</option>
+                    <option value="BR">EVA Air</option>
+                    <option value="AY">Finnair</option>
+                    <option value="BE">FlyBe</option>
+                    <option value="GA">Garuda Indonesia</option>
+                    <option value="GF">Gulf Air</option>
+                    <option value="IB">Iberia Airlines </option>
+                    <option value="FI">IcelandAir</option>
+                    <option value="JL">Japan Airlines</option>
+                    <option value="9W">Jet Airways</option>
+                    <option value="KL">KLM Royal Dutch Airlines</option>
+                    <option value="KE">Korean Air</option>
+                    <option value="KU">Kuwait Airways</option>
+                    <option value="LA">LAN Airlines</option>
+                    <option value="LO">LOT Polish Airlines</option>
+                    <option value="LH">Lufthansa</option>
+                    <option value="MH">Malaysia Airlines</option>
+                    <option value="ZB">Monarch Airlines</option>
+                    <option value="NW">Northwest Airlines</option>
+                    <option value="OA">Olympic Airlines</option>
+                    <option value="WY">Oman Air</option>
+                    <option value="QF">Qantas Airways</option>
+                    <option value="QR">Qatar Airways</option>
+                    <option value="AT">Royal Air Maroc</option>
+                    <option value="BI">Royal Brunei Airlines</option>
+                    <option value="RJ">Royal Jordanian</option>
+                    <option value="SK">SAS - Scandinavian Airlines</option>
+                    <option value="SQ">Singapore Airlines</option>
+                    <option value="SA">South African Airways</option>
+                    <option value="UL">SriLankan Airlines</option>
+                    <option value="LX">Swiss Airlines</option>
+                    <option value="JJ">TAM Airlines</option>
+                    <option value="TP">TAP Portugal</option>
+                    <option value="TG">Thai Airways</option>
+                    <option value="TK">Turkish Airlines</option>
+                    <option value="PS">Ukraine Intl.</option>
+                    <option value="UA">United Airlines</option>
+                    <option value="US">US Airways</option>
+                    <option value="HY">Uzbekistan Airways</option>
+                    <option value="RG">Varig Brazilian</option>
+                    <option value="VN">Vietnam Airlines</option>
+                    <option value="VS">Virgin Atlantic</option>
+                    <option value="VG">VLM Airlines</option>
+                  </select>
+                  <i class="fa fa-angle-down"></i> </li>
+              </ul>
+              <div class="search_flights"> <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="recent-search-container">
+  <div class="fixed-width">
+    <div class="recent-content">
+      <div class="title">Recent Searches</div>
+      <div class="row">
+        <div id="recent-slider" class="owl-carousel">
+          <div class="recent-box">
+            <div class="heads">
+              <div class="icon-container">
+                <div class="rec-left">lhr</div>
+                <div class="icon-border"><i class="fa fa-plane fa-rotate-45"></i></div>
+                <div class="rec-right">bkk</div>
+              </div>
+              <div class="close_btn"><i class="fa fa-times"></i></div>
+            </div>
+            <div class="content-section">
+              <div class="dr-box">
+                <div class="text">Depart 11 Feb 2016</div>
+              </div>
+              <div class="dr-box">
+                <div class="text">Return 18 Feb 2016</div>
+              </div>
+            </div>
+          </div>
+          <div class="recent-box">
+            <div class="heads">
+              <div class="icon-container">
+                <div class="rec-left">lhr</div>
+                <div class="icon-border"><i class="fa fa-plane fa-rotate-45"></i></div>
+                <div class="rec-right">bkk</div>
+              </div>
+              <div class="close_btn"><i class="fa fa-times"></i></div>
+            </div>
+            <div class="content-section">
+              <div class="dr-box">
+                <div class="text">Depart 11 Feb 2016</div>
+              </div>
+              <div class="dr-box">
+                <div class="text">Return 18 Feb 2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="destination-container">
+  <div class="fixed-width">
+    <div class="destination-content">
+      <div class="title">Popular Destinations</div>
+      <ul class="popular-box owl-carousel" id="destination-slider">
+          <li>
+            <div class="img-area gstyle1" style="background:url(images/destination_thumb1.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="img-area gstyle2" style="background-image:url(images/destination_thumb2.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>       
+          <li>
+            <div class="img-area gstyle3" style="background:url(images/destination_thumb3.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="img-area gstyle2" style="background:url(images/destination_thumb4.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="img-area gstyle2" style="background:url(images/destination_thumb5.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="img-area gstyle4" style="background:url(images/destination_thumb6.jpg);"> <a href="#">
+              <div class="content">
+                <div class="panel-icon"><i class="fa fa-map-marker"></i></div>
+                <div class="panel-text"> Flights to Sydney <span>Australia</span> </div>
+              </div>
+              </a> </div>
+            <div class="content-area">
+              <div class="economy-box">
+                <div class="detailed">
+                  <div class="frm">Economy from</div>
+                  <div class="prce">£203.79</div>
+                </div>
+              </div>
+              <div class="business-box">
+                <div class="detailed">
+                  <div class="frm">Business from</div>
+                  <div class="prce">£1603.29</div>
+                </div>
+              </div>
+            </div>
+          </li>        
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="holidays-container">
+  <div class="gallery-section">
+    <div class="title">Luxury Holidays</div>
+    <article class="item hover-class"> <a href="#"> <img src="images/gallery-thumb1.jpg"> </a>
+      <div class="hover-effect"></div>
+      <div class="img-content">
+        <div class="head-text">Beach Tour</div>
+        <div class="desc-text">Price Started £199</div>
+      </div>
+    </article>
+    <article class="item">
+      <div class="items hover-class"> <a href="#"> <img src="images/gallery-thumb2.jpg"> </a>
+        <div class="hover-effect"></div>
+        <div class="img-content">
+          <div class="head-text">Family Tour</div>
+          <div class="desc-text">Price Started £199</div>
+        </div>
+      </div>
+      <div class="items hover-class"> <a href="#"> <img src="images/gallery-thumb3.jpg"> </a>
+        <div class="hover-effect"></div>
+      </div>
+    </article>
+    <article class="item hover-class"> <a href="#"> <img src="images/gallery-thumb4.jpg"> </a>
+      <div class="hover-effect"></div>
+    </article>
+    <span class="break-line"></span>
+    <article class="item hover-class"> <a href="#"> <img src="images/gallery-thumb5.jpg"> </a>
+      <div class="hover-effect"></div>
+    </article>
+    <article class="item hover-class"> <a href="#"> <img src="images/gallery-thumb6.jpg"> </a>
+      <div class="hover-effect"></div>
+    </article>
+    <article class="item">
+      <div class="items hover-class"> <a href="#"> <img src="images/gallery-thumb7.jpg"> </a>
+        <div class="hover-effect"></div>
+      </div>
+      <div class="items hover-class"> <a href="#"> <img src="images/gallery-thumb9.jpg"> </a>
+        <div class="hover-effect"></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="carInsurance-container">
+  <div class="fixed-width">
+    <div class="car-section">
+      <div class="title">Online Car Booking! <span>Book a car that serves your needs best.</span> </div>
+      <div class="car-content-section">
+        <div class="image-area"><img src="images/car-thumb.png"></div>
+        <ul class="why-book">
+          <div class="heads">Why book with us?</div>
+          <li>Lowest Price! No hidden Extras!</li>
+          <li>Value for your money assured</li>
+          <li>Big selection of cars, locations, supplier</li>
+          <li>Easy to search and book</li>
+        </ul>
+      </div>
+      <div class="car-bottom-section">
+        <div class="supplier-img"><img src="images/car_supp-img.jpg"></div>
+        <div class="book_btn-section">
+          <button type="button" class="book_btn">Book now!</button>
+        </div>
+      </div>
+    </div>
+    <div class="insurance-section"> <img src="images/insurance_banner.jpg">
+      <div class="book_btn-section">
+        <button type="button" class="book_btn">Book now!</button>
+      </div>
+    </div>
+    <div class="insurance-section2"> <img src="images/insurance_banner2.jpg">
+      <div class="book_btn-section">
+        <button type="button" class="book_btn">Book now!</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="whybook-container">
+  <div class="fixed-width">
+    <div class="title-container">
+      <div class="line"></div>
+      <div class="title">Why book with us?</div>
+      <div class="line"></div>
+    </div>
+    <div class="whybook-slider-container">
+      <div id="whybook-slider" class="owl-carousel">
+        <div class="why-slider"> <i class="fa fa-thumbs-up"></i>
+          <div class="descrip-area">
+            <div class="title">Best Price Guarantee</div>
+            <div class="texts">Get Guaranteed Lowest Price on Flights to Worldwide Destinations</div>
+          </div>
+        </div>
+        <div class="why-slider"> <i class="fa fa-ticket"></i>
+          <div class="descrip-area">
+            <div class="title">Book Tickets Easily</div>
+            <div class="texts">Search, Select and Book - Complete Your Booking in Simple Steps</div>
+          </div>
+        </div>
+        <div class="why-slider"> <i class="fa fa-phone"></i>
+          <div class="descrip-area">
+            <div class="title">24/7 Customer Care</div>
+            <div class="texts">Call Our Customer Care for Excellent Services and Special Deals</div>
+          </div>
+        </div>
+        <div class="why-slider"> <i class="fa fa-phone"></i>
+          <div class="descrip-area">
+            <div class="title">24/7 Customer Care</div>
+            <div class="texts">Call Our Customer Care for Excellent Services and Special Deals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about-container">
+  <div class="fixed-width">
+    <div class="subscribe-box">
+      <div class="subs-content">
+        <div class="subs-content-container">
+          <div class="title">Join the Carlton Leisure</div>
+          <div class="input-container">
+            <input name="" type="text" placeholder="Enter Your Email">
+            <button type="button" class="sub_btn"><i class="fa fa-paper-plane"></i>Subscribe</button>
+          </div>
+          <div class="sub-text">Get great flights, hotels and flight+hotels and exclusive offers straight into inbox - subscribe today!</div>
+        </div>
+      </div>
+      <div class="social-content">
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-box">
+      <div class="title">About Carlton Leisure</div>
+      <p>Carlton Leisure is one of the leading travel agents in London, UK offering cheap flights to Bangkok, Sydney, Melbourne, New Delhi, Mumbai, Brisbane, Sao Paulo and other parts of the world. You can easily book cheap flights to Dubai, New York, Johannesburg, Auckland, Perth, Manila, Kuala Lumpur, Singapore, Hong Kong, Cape Town, Shanghai, Rio De Janeiro, Washington and other top vacation destinations of the world. We also offer City Break, Short Break, Hotels and Package Holidays to worldwide destinations. We work with Emirates, Qatar Airways, Etihad Airways, TAM Airlines, Malaysia Airlines, British Airways, Virgin Atlantic, Iberia Airlines, Jet Airways, Thai Airways, Turkish Airlines, Eva Airways, Gulf Air, Tap Portugal, Kuwait Airways, South African Airways, Brussels Airlines, Oman Air, Vietnam Airlines and many other top Airlines in the world. All the flights you book with us are ATOL and IATA protected allowing you to book with confidence.<br>
+        <br>
+        Carlton Leisure (UK) Ltd is a company registered in England and Wales at 299, Rayners Lane, PINNER Middlesex United Kingdom HA5 5EH. Company Registration Number is 2697756. Customer services: 0208 100 0000 | 0208 385 6850 Hour: Mon-Sat: 0800-2300 | Sun 0900-2200 Email us: info@carltonleisure.com </p>
+    </div>
+  </div>
+</section>
+<section class="footer-container">
+  <div class="fixed-width">
+    <div class="footer-nav">
+      <ul>
+        <li class="title">Information</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Travel Guide</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+      <ul>
+        <li class="title">Customer services</li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+      </ul>
+      <span class="break-line"></span>
+      <ul>
+        <li class="title">Flights</li>
+        <li><a href="#">Business Class Flights</a></li>
+        <li><a href="#">First Class Flights</a></li>
+        <li><a href="#">Group Travel</a></li>
+        <li><a href="#">Multi-City Search</a></li>
+        <li><a href="#">Online-Check-In</a></li>
+      </ul>
+      <ul>
+        <li class="title">Airlines</li>
+        <li><a href="#">British Airways</a></li>
+        <li><a href="#">Emirates Airways</a></li>
+        <li><a href="#">Etihad Airways</a></li>
+        <li><a href="#">TAM Airlines</a></li>
+        <li><a href="#">All Airlines</a></li>
+      </ul>
+      <span class="break-line"></span>
+      <ul>
+        <li class="title">Extras</li>
+        <li><a href="https://www.carltonleisure.com/insurance.aspx" title="Travel Insurance at unbelievable price">Travel Insurance</a></li>
+        <li><a href="#">Car Hire</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div class="icon_container">
+        <div class="iata"></div>
+        <a class="iconnorton" href="#"></a> <a class="iconatols" href="#"></a> </div>
+      <p>Payment Methods: Visa, Mastercard, Maestro, Delta and American Express</p>
+      <p>Carlton Leisure UK Limited © Copyright  2016  All rights reserved.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
