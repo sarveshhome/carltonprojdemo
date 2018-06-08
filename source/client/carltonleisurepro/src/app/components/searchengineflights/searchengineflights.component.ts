@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchengineflightsComponent implements OnInit {
   constructor() {
-
    }
   ngOnInit() {
   }
