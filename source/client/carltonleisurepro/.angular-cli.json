@@ -21,8 +21,7 @@
             "styles.css"
         ],
         "scripts": [
-            "../src/assets/js/easyResponsiveTabs.js",
-            "../src/assets/js/jquery-ui.js"
+
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

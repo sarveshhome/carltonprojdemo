@@ -1,232 +1,590 @@
-<div class="main-agileinfo">
-    <div class="sap_tabs">
-        <div id="horizontalTab">
-            <ul class="resp-tabs-list">
-                <li class="resp-tab-item"><span>Round Trip</span></li>
-                <li class="resp-tab-item"><span>One way</span></li>
-                <li class="resp-tab-item"><span>Multi city</span></li>
-            </ul>
-            <div class="clearfix"> </div>
-            <div class="resp-tabs-container">
-                <div class="tab-1 resp-tab-content roundtrip">
-                    <form action="#" method="post">
-                        <div class="from">
-                            <h3>From</h3>
-                            <input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
-                        </div>
-                        <div class="to">
-                            <h3>To</h3>
-                            <input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-                        </div>
-                        <div class="clear"></div>
-                        <div class="date">
-                            <div class="depart">
-                                <h3>Depart</h3>
-                                <input id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                <span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-                            </div>
-                            <div class="return">
-                                <h3>Return</h3>
-                                <input id="datepicker1" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                <span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="class">
-                            <h3>Class</h3>
-                            <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Economy</option>
-									<option value="null">Premium Economy</option>
-									<option value="null">Business</option>
-									<option value="null">First class</option>
-								</select>
-
-                        </div>
-                        <div class="clear"></div>
-                        <div class="numofppl">
-                            <div class="adults">
-                                <h3>Adult:(12+ yrs)</h3>
-                                <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="child">
-                                <h3>Child:(2-11 yrs)</h3>
-                                <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                        <input type="submit" value="Search Flights">
-                    </form>
-                </div>
-                <div class="tab-1 resp-tab-content oneway">
-                    <form action="#" method="post">
-                        <div class="from">
-                            <h3>From</h3>
-                            <input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
-                        </div>
-                        <div class="to">
-                            <h3>To</h3>
-                            <input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-                        </div>
-                        <div class="clear"></div>
-                        <div class="date">
-                            <div class="depart">
-                                <h3>Depart</h3>
-                                <input class="date" id="datepicker2" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                <span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-                            </div>
-                        </div>
-                        <div class="class">
-                            <h3>Class</h3>
-                            <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Economy</option>
-									<option value="null">Premium Economy</option>
-									<option value="null">Business</option>
-									<option value="null">First class</option>
-								</select>
-
-                        </div>
-                        <div class="clear"></div>
-                        <div class="numofppl">
-                            <div class="adults">
-                                <h3>Adult:(12+ yrs)</h3>
-                                <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="child">
-                                <h3>Child:(2-11 yrs)</h3>
-                                <div class="quantity">
-                                    <div class="quantity-select">
-                                        <div class="entry value-minus">&nbsp;</div>
-                                        <div class="entry value"><span>1</span></div>
-                                        <div class="entry value-plus active">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                        <input type="submit" value="Search Flights">
-                    </form>
-
-                </div>
-                <div class="tab-1 resp-tab-content multicity">
-
-                    <form action="#" method="post">
-                        <div class="from">
-                            <h3>From</h3>
-                            <input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
-                        </div>
-                        <div class="to">
-                            <h3>To</h3>
-                            <input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-                        </div>
-                        <div class="clear"></div>
-                        <div class="date">
-                            <div class="depart">
-                                <h3>Depart</h3>
-                                <input class="date" id="datepicker3" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                <span class="checkbox1">
-													<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-												</span>
-                            </div>
-                        </div>
-                        <div class="class">
-                            <h3>Class</h3>
-                            <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-												<option value="null">Economy</option>
-												<option value="null">Premium Economy</option>
-												<option value="null">Business</option>
-												<option value="null">First class</option>
-											</select>
-                        </div>
-                        <div class="clear"></div>
-                        <div id="loadMore">Add City+</div>
-                        <div id="showLess">Remove</div>
-                    </form>
-                    <div class="load_more">
-                        <ul id="myList">
-                            <li>
-                                <div class="l_g spcl">
-                                    <form action="#" method="post" class="blackbg">
-                                        <div class="from">
-                                            <h3>From</h3>
-                                            <input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
+<section class="search-engine-section">
+    <div class="slider-area">
+        <div id="banner-slider" class="owl-carousel">
+            <div class="slider-img" style="background-image:url(images/flight_banner2.jpg);"></div>
+            <div class="slider-img" style="background-image:url(images/hotel_banner2.jpg);"></div>
+            <div class="slider-img" style="background-image:url(images/home-banner.jpg);"></div>
+            <!--<div class="item"><img src="images/flight_banner.jpg" ></div>
+      <div class="item"><img src="images/hotel_banner.jpg" ></div>-->
+        </div>
+    </div>
+    <div class="booking-engine">
+        <div class="se-fixed-width">
+            <div class="be-container" id="be-panel">
+                <ul class="booking-engine-tabs clearfix">
+                    <li class="active">
+                        <a href="#flight-panel" data-toggle="tab"> <i class="fa fa-plane"></i> <span>Flights</span> </a>
+                    </li>
+                    <li>
+                        <a href="#hotel-panel" data-toggle="tab"> <i class="fa fa-bed"></i> <span>Hotels</span> </a>
+                    </li>
+                    <li>
+                        <a href="#flightnhotel" data-toggle="tab"> <i class="fa fa-plane"></i> <i class="fa fa-bed"></i> <span>Flight + Hotel</span> </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#car-panel" data-toggle="tab"> <i class="fa fa-car"></i> <span>Cars</span> </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#insurance-panel" data-toggle="tab"> <i class="fa fa-umbrella"></i> <span>Insurance</span> </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#multicity" data-toggle="tab"> <i class="fa fa-recycle"></i> <span>Multicity</span> </a>
+                    </li>
+                    <li class="mob_tab-arrow dropdown" id="mob-tab">
+                        <a href="#"> <i class="fa fa-ellipsis-v"></i> </a>
+                    </li>
+                    <div class="mob_dropdown" id="mob-tab_list">
+                        <div class="close"><i class="fa fa-close"></i></div>
+                        <a href="#car-panel" data-toggle="tab"><i class="fa fa-car"></i> Cars</a>
+                        <a href="#insurance-panel" data-toggle="tab"><i class="fa fa-umbrella"></i> Insurance</a>
+                        <a href="#multicity" data-toggle="tab"><i class="fa fa-recycle"></i> Multicity</a>
+                    </div>
+                </ul>
+                <div class="booking-engine-content tab-content be-min_height">
+                    <div class="flight_frm-wrapper tab-pane fade in active" id="flight-panel">
+                        <div class="flight-type"> <span class="radios">
+              <input name="ftype" type="radio" value="" id="return">
+              <label for="return">Return</label>
+              </span> <span class="radios">
+              <input name="ftype" type="radio" value="" id="oneway">
+              <label for="oneway">One way</label>
+              </span> </div>
+                        <div class="flight-details">
+                            <ul class="flight-frm-wrap">
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Flying from">
+                                </li>
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Going from">
+                                </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Depart">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Return">
+                                    <span class="fa fa-calendar"></span> </li>
+                            </ul>
+                            <div class="bottom-section">
+                                <div class="pax-contents">
+                                    <div class="pax-container" id="pax-content"> <span>1 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                                    <div class="dropdown-section animated slideInDown" id="pax-detail">
+                                        <ul class="travellers-area">
+                                            <li>
+                                                <label>Adults (12+)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtAdults" value="1">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label>Children (2-12)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtChilds" value="0">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label>Infants (0-2)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtInfants" value="0">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="close-section">
+                                            <button class="close-butt">Close</button>
                                         </div>
-                                        <div class="to">
-                                            <h3>To</h3>
-                                            <input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-                                        </div>
-                                        <div class="clear"></div>
-                                        <div class="date">
-                                            <div class="depart">
-                                                <h3>Depart</h3>
-                                                <input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                                <span class="checkbox1">
-													<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-												</span>
-                                            </div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </form>
-
+                                    </div>
                                 </div>
-
+                                <ul class="more-options">
+                                    <li>
+                                        <div id="cabin_class" class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                                        <div class="dropdown-section" id="cabin_list">
+                                            <ul class="cabin-list">
+                                                <li data-text="Economy" data-val="M"><a href="#">Economy</a></li>
+                                                <li data-text="Premium Economy" data-val="W"><a href="#">Premium Economy</a></li>
+                                                <li data-text="Business" data-val="C"><a href="#">Business</a></li>
+                                                <li data-text="First Class" data-val="F"><a href="#">First Class</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="mopt" id="mopt"> <span>more options</span> <i class="fa fa-angle-down"></i> </div>
+                                        <div class="dropdown-section" id="mopt_list">
+                                            <div class="airlnes">
+                                                <select name="">
+                          <option value="all">All Airlines</option>
+                          <option value="EI">Aer Lingus</option>
+                          <option value="AR">Aerolineas Argentinas</option>
+                          <option value="AB">Air Berlin</option>
+                          <option value="AC">Air Canada</option>
+                          <option value="CA">Air China</option>
+                          <option value="UX">Air Europa Lineas Aereas</option>
+                          <option value="AF">Air France</option>
+                          <option value="AI">Air India</option>
+                          <option value="JM">Air Jamaica</option>
+                          <option value="KM">Air Malta</option>
+                          <option value="MK">Air Mauritius</option>
+                          <option value="SW">Air Namibia</option>
+                          <option value="NZ">Air New Zealand</option>
+                          <option value="HM">Air Seychelles</option>
+                          <option value="AZ">Alitalia</option>
+                          <option value="AA">American Airlines</option>
+                          <option value="NH">ANA</option>
+                          <option value="OZ">Asiana Airlines</option>
+                          <option value="OS">Austrian Airlines</option>
+                          <option value="BA">British Airways</option>
+                          <option value="SN">Brussels Airlines</option>
+                          <option value="BW">Caribbean Airlines</option>
+                          <option value="CX">Cathay Pacific Airways</option>
+                          <option value="CI">China Airlines</option>
+                          <option value="MU">China Eastern Airlines</option>
+                          <option value="CZ">China Southern</option>
+                          <option value="CO">Continental Airlines</option>
+                          <option value="CY">Cyprus Airways</option>
+                          <option value="OK">Czech Airlines</option>
+                          <option value="DL">Delta Airlines</option>
+                          <option value="MS">Egypt Air</option>
+                          <option value="EK">Emirates Airways</option>
+                          <option value="OV">Estonian Air</option>
+                          <option value="ET">Ethiopian Airlines</option>
+                          <option value="EY">Etihad Airways</option>
+                          <option value="BR">EVA Air</option>
+                          <option value="AY">Finnair</option>
+                          <option value="BE">FlyBe</option>
+                          <option value="GA">Garuda Indonesia</option>
+                          <option value="GF">Gulf Air</option>
+                          <option value="IB">Iberia Airlines </option>
+                          <option value="FI">IcelandAir</option>
+                          <option value="JL">Japan Airlines</option>
+                          <option value="9W">Jet Airways</option>
+                          <option value="KL">KLM Royal Dutch Airlines</option>
+                          <option value="KE">Korean Air</option>
+                          <option value="KU">Kuwait Airways</option>
+                          <option value="LA">LAN Airlines</option>
+                          <option value="LO">LOT Polish Airlines</option>
+                          <option value="LH">Lufthansa</option>
+                          <option value="MH">Malaysia Airlines</option>
+                          <option value="ZB">Monarch Airlines</option>
+                          <option value="NW">Northwest Airlines</option>
+                          <option value="OA">Olympic Airlines</option>
+                          <option value="WY">Oman Air</option>
+                          <option value="QF">Qantas Airways</option>
+                          <option value="QR">Qatar Airways</option>
+                          <option value="AT">Royal Air Maroc</option>
+                          <option value="BI">Royal Brunei Airlines</option>
+                          <option value="RJ">Royal Jordanian</option>
+                          <option value="SK">SAS - Scandinavian Airlines</option>
+                          <option value="SQ">Singapore Airlines</option>
+                          <option value="SA">South African Airways</option>
+                          <option value="UL">SriLankan Airlines</option>
+                          <option value="LX">Swiss Airlines</option>
+                          <option value="JJ">TAM Airlines</option>
+                          <option value="TP">TAP Portugal</option>
+                          <option value="TG">Thai Airways</option>
+                          <option value="TK">Turkish Airlines</option>
+                          <option value="PS">Ukraine Intl.</option>
+                          <option value="UA">United Airlines</option>
+                          <option value="US">US Airways</option>
+                          <option value="HY">Uzbekistan Airways</option>
+                          <option value="RG">Varig Brazilian</option>
+                          <option value="VN">Vietnam Airlines</option>
+                          <option value="VS">Virgin Atlantic</option>
+                          <option value="VG">VLM Airlines</option>
+                        </select>
+                                                <i class="fa fa-angle-down"></i></div>
+                                            <div class="dflexibility">
+                                                <select name="">
+                          <option value="any">My dates are fixed</option>
+                          <option value="M">My dates are flexible +/- 3 days</option>
+                        </select>
+                                                <i class="fa fa-angle-down"></i> </div>
+                                            <button class="done_btn">Done</button>
+                                        </div>
+                                    </li>
+                                    <li class="desk-view">
+                                        <div class="checkbox">
+                                            <input id="terms" name="" type="checkbox" value="" class="check" />
+                                            <label for="terms">Direct flights only</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tab_view">
+                                    <div class="checkbox">
+                                        <input id="termss" name="" type="checkbox" value="" class="check" />
+                                        <label for="termss">Direct flights only</label>
+                                    </div>
+                                </div>
+                                <div class="search_flights">
+                                    <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel_frm-wrapper tab-pane fade" id="hotel-panel">
+                        <ul class="hotel-frm-wrap">
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Enter your destination">
                             </li>
-                            <form action="#" method="post">
-                                <div class="numofppl">
-                                    <div class="adults">
-                                        <h3>Adult:(12+ yrs)</h3>
-                                        <div class="quantity">
-                                            <div class="quantity-select">
-                                                <div class="entry value-minus">&nbsp;</div>
-                                                <div class="entry value"><span>1</span></div>
-                                                <div class="entry value-plus active">&nbsp;</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="child">
-                                        <h3>Child:(2-11 yrs)</h3>
-                                        <div class="quantity">
-                                            <div class="quantity-select">
-                                                <div class="entry value-minus">&nbsp;</div>
-                                                <div class="entry value"><span>1</span></div>
-                                                <div class="entry value-plus active">&nbsp;</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="clear"></div>
-                                <input type="submit" value="Search Flights">
-                            </form>
+                            <li class="date_column">
+                                <input name="" type="text" placeholder="Depart">
+                                <span class="fa fa-calendar"></span> </li>
+                            <li class="date_column">
+                                <input name="" type="text" placeholder="Return">
+                                <span class="fa fa-calendar"></span> </li>
                         </ul>
+                        <div class="search_flights">
+                            <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                        </div>
+                    </div>
+                    <div class="fl-hotel_frm-wrapper tab-pane fade" id="flightnhotel">
+                        <div class="flight_hotel-details">
+                            <ul class="flight_hotel-frm-wrap">
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Flying from">
+                                </li>
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Going from">
+                                </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Depart">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Return">
+                                    <span class="fa fa-calendar"></span> </li>
+                            </ul>
+                            <div class="bottom-section">
+                                <div class="pax-contents">
+                                    <div class="pax-container" id="fh-pax-content"> <span>1 Room : 2 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                                    <div class="dropdown-section" id="fh-pax-detail">
+                                        <ul class="travellers-area">
+                                            <li>
+                                                <label>Adults (12+)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtAdults" value="1">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label>Children (2-12)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtChilds" value="0">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label>Infants (0-2)</label>
+                                                <div class="numbers-row">
+                                                    <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                    <input type="text" name="" id="txtInfants" value="0">
+                                                    <div class="inc button"><i class="fa fa-plus"></i></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="close-section">
+                                            <button class="close-butt">Close</button>
+                                        </div>
+                                    </div>
+                                    <div class="add-rooms"><i class="fa fa-plus"></i> Add a room</div>
+                                </div>
+                                <ul class="more-options">
+                                    <li>
+                                        <div class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                                    </li>
+                                    <li>
+                                        <div class="alines"><span>Airlines</span> <i class="fa fa-angle-down"></i></div>
+                                    </li>
+                                    <li class="desk-view">
+                                        <div class="checkbox">
+                                            <input id="terms" name="" type="checkbox" value="" class="check" />
+                                            <label for="terms">Direct flights only</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tab_view">
+                                    <div class="checkbox">
+                                        <input id="termss" name="" type="checkbox" value="" class="check" />
+                                        <label for="termss">Direct flights only</label>
+                                    </div>
+                                </div>
+                                <div class="search_flights">
+                                    <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_frm-wrapper tab-pane fade" id="car-panel">
+                        <div class="res-heading">Car Hire</div>
+                        <div class="car-details">
+                            <ul class="car-frm-wrap">
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Flying from">
+                                </li>
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Going from">
+                                </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Depart">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="time_column">
+                                    <select name="">
+                    <option value="">10:00</option>
+                  </select>
+                                    <i class="fa fa-angle-down"></i> </li>
+                                <li class="date_column2">
+                                    <input name="" type="text" placeholder="Return">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="time_column">
+                                    <select name="">
+                    <option value="">10:00</option>
+                  </select>
+                                    <i class="fa fa-angle-down"></i> </li>
+                            </ul>
+                            <div class="bottom-section">
+                                <div class="left-section">
+                                    <div class="rlocation">
+                                        <div class="checkbox">
+                                            <input id="dlocation" name="" type="checkbox" value="" class="check" checked="checked" />
+                                            <label for="dlocation">Return to a different location</label>
+                                        </div>
+                                    </div>
+                                    <div class="driver_age">
+                                        <div class="checkbox">
+                                            <input id="dage" name="" type="checkbox" value="" class="check" />
+                                            <label for="dage">Driver aged between 25-70</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search_flights">
+                                    <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insurance_frm-wrapper tab-pane fade" id="insurance-panel">
+                        <div class="res-heading">Travel Insurance</div>
+                        <div class="insurance-details">
+                            <ul class="insurance-frm-wrap">
+                                <li> <i class="fa fa-map-marker"></i>
+                                    <input name="" type="text" placeholder="Enter your destination">
+                                </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Depart">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="date_column">
+                                    <input name="" type="text" placeholder="Return">
+                                    <span class="fa fa-calendar"></span> </li>
+                                <li class="not">
+                                    <label>No. of Travellers</label>
+                                    <div class="numbers-row">
+                                        <div class="dec button"><em class="fa fa-minus"></em></div>
+                                        <input type="text" name="" id="txtAdults" value="1">
+                                        <div class="inc button"><em class="fa fa-plus"></em></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="bottom-section">
+                                <div class="not">
+                                    <label>No. of Travellers</label>
+                                    <div class="numbers-row">
+                                        <div class="dec button"><em class="fa fa-minus"></em></div>
+                                        <input type="text" name="" id="txtAdults" value="1">
+                                        <div class="inc button"><em class="fa fa-plus"></em></div>
+                                    </div>
+                                </div>
+                                <ul class="dob-container">
+                                    <label>Date Of Birth</label>
+                                    <li>
+                                        <input name="" type="text" placeholder="1st Traveller">
+                                        <span class="fa fa-calendar"></span> </li>
+                                    <li>
+                                        <input name="" type="text" placeholder="2nd Traveller">
+                                        <span class="fa fa-calendar"></span> </li>
+                                </ul>
+                                <div class="search_flights">
+                                    <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mc_frm-wrapper tab-pane fade" id="multicity">
+                        <ul class="mc-frm-wrap">
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Flying from">
+                            </li>
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Going from">
+                            </li>
+                            <li class="date_column">
+                                <input name="" type="text" placeholder="Depart">
+                                <span class="fa fa-calendar"></span> </li>
+                        </ul>
+                        <ul class="mc-frm-wrap">
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Flying from">
+                            </li>
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Going from">
+                            </li>
+                            <li class="date_column">
+                                <input name="" type="text" placeholder="Depart">
+                                <span class="fa fa-calendar"></span> </li>
+                        </ul>
+                        <ul class="mc-frm-wrap">
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Flying from">
+                            </li>
+                            <li> <i class="fa fa-map-marker"></i>
+                                <input name="" type="text" placeholder="Going from">
+                            </li>
+                            <li class="date_column">
+                                <input name="" type="text" placeholder="Depart">
+                                <span class="fa fa-calendar"></span> </li>
+                            <li class="close_column"> <i class="fa fa-times"></i> </li>
+                        </ul>
+                        <div class="add-flights"> <i class="fa fa-plus"></i> add another flight </div>
+                        <div class="bottom-section">
+                            <div class="pax-contents">
+                                <div class="pax-container" id="mpax-content"> <span>1 Adults</span> <i class="fa fa-angle-down"></i> </div>
+                                <div class="dropdown-section animated slideInDown" id="mpax-detail">
+                                    <ul class="travellers-area">
+                                        <li>
+                                            <label>Adults (12+)</label>
+                                            <div class="numbers-row">
+                                                <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                <input type="text" name="" id="txtAdults" value="1">
+                                                <div class="inc button"><i class="fa fa-plus"></i></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label>Children (2-12)</label>
+                                            <div class="numbers-row">
+                                                <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                <input type="text" name="" id="txtChilds" value="0">
+                                                <div class="inc button"><i class="fa fa-plus"></i></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label>Infants (0-2)</label>
+                                            <div class="numbers-row">
+                                                <div class="dec button"><i class="fa fa-minus"></i></div>
+                                                <input type="text" name="" id="txtInfants" value="0">
+                                                <div class="inc button"><i class="fa fa-plus"></i></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="close-section">
+                                        <button type="button" class="close-butt">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="more-options">
+                                <li>
+                                    <div id="cabin_class" class="cabin"><span>Economy</span> <i class="fa fa-angle-down"></i></div>
+                                    <div class="dropdown-section" id="cabin_list">
+                                        <ul class="cabin-list">
+                                            <li data-text="Economy" data-val="M"><a href="#">Economy</a></li>
+                                            <li data-text="Premium Economy" data-val="W"><a href="#">Premium Economy</a></li>
+                                            <li data-text="Business" data-val="C"><a href="#">Business</a></li>
+                                            <li data-text="First Class" data-val="F"><a href="#">First Class</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="airlnes">
+                                    <select name="">
+                    <option value="all">All Airlines</option>
+                    <option value="EI">Aer Lingus</option>
+                    <option value="AR">Aerolineas Argentinas</option>
+                    <option value="AB">Air Berlin</option>
+                    <option value="AC">Air Canada</option>
+                    <option value="CA">Air China</option>
+                    <option value="UX">Air Europa Lineas Aereas</option>
+                    <option value="AF">Air France</option>
+                    <option value="AI">Air India</option>
+                    <option value="JM">Air Jamaica</option>
+                    <option value="KM">Air Malta</option>
+                    <option value="MK">Air Mauritius</option>
+                    <option value="SW">Air Namibia</option>
+                    <option value="NZ">Air New Zealand</option>
+                    <option value="HM">Air Seychelles</option>
+                    <option value="AZ">Alitalia</option>
+                    <option value="AA">American Airlines</option>
+                    <option value="NH">ANA</option>
+                    <option value="OZ">Asiana Airlines</option>
+                    <option value="OS">Austrian Airlines</option>
+                    <option value="BA">British Airways</option>
+                    <option value="SN">Brussels Airlines</option>
+                    <option value="BW">Caribbean Airlines</option>
+                    <option value="CX">Cathay Pacific Airways</option>
+                    <option value="CI">China Airlines</option>
+                    <option value="MU">China Eastern Airlines</option>
+                    <option value="CZ">China Southern</option>
+                    <option value="CO">Continental Airlines</option>
+                    <option value="CY">Cyprus Airways</option>
+                    <option value="OK">Czech Airlines</option>
+                    <option value="DL">Delta Airlines</option>
+                    <option value="MS">Egypt Air</option>
+                    <option value="EK">Emirates Airways</option>
+                    <option value="OV">Estonian Air</option>
+                    <option value="ET">Ethiopian Airlines</option>
+                    <option value="EY">Etihad Airways</option>
+                    <option value="BR">EVA Air</option>
+                    <option value="AY">Finnair</option>
+                    <option value="BE">FlyBe</option>
+                    <option value="GA">Garuda Indonesia</option>
+                    <option value="GF">Gulf Air</option>
+                    <option value="IB">Iberia Airlines </option>
+                    <option value="FI">IcelandAir</option>
+                    <option value="JL">Japan Airlines</option>
+                    <option value="9W">Jet Airways</option>
+                    <option value="KL">KLM Royal Dutch Airlines</option>
+                    <option value="KE">Korean Air</option>
+                    <option value="KU">Kuwait Airways</option>
+                    <option value="LA">LAN Airlines</option>
+                    <option value="LO">LOT Polish Airlines</option>
+                    <option value="LH">Lufthansa</option>
+                    <option value="MH">Malaysia Airlines</option>
+                    <option value="ZB">Monarch Airlines</option>
+                    <option value="NW">Northwest Airlines</option>
+                    <option value="OA">Olympic Airlines</option>
+                    <option value="WY">Oman Air</option>
+                    <option value="QF">Qantas Airways</option>
+                    <option value="QR">Qatar Airways</option>
+                    <option value="AT">Royal Air Maroc</option>
+                    <option value="BI">Royal Brunei Airlines</option>
+                    <option value="RJ">Royal Jordanian</option>
+                    <option value="SK">SAS - Scandinavian Airlines</option>
+                    <option value="SQ">Singapore Airlines</option>
+                    <option value="SA">South African Airways</option>
+                    <option value="UL">SriLankan Airlines</option>
+                    <option value="LX">Swiss Airlines</option>
+                    <option value="JJ">TAM Airlines</option>
+                    <option value="TP">TAP Portugal</option>
+                    <option value="TG">Thai Airways</option>
+                    <option value="TK">Turkish Airlines</option>
+                    <option value="PS">Ukraine Intl.</option>
+                    <option value="UA">United Airlines</option>
+                    <option value="US">US Airways</option>
+                    <option value="HY">Uzbekistan Airways</option>
+                    <option value="RG">Varig Brazilian</option>
+                    <option value="VN">Vietnam Airlines</option>
+                    <option value="VS">Virgin Atlantic</option>
+                    <option value="VG">VLM Airlines</option>
+                  </select>
+                                    <i class="fa fa-angle-down"></i> </li>
+                            </ul>
+                            <div class="search_flights">
+                                <a class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
