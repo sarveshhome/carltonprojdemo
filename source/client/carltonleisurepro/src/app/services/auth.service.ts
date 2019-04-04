@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { HttpModule } from '@angular/http';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 import { tokenNotExpired } from 'angular2-jwt';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthService {
@@ -18,7 +19,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3060/user/register', user, {headers: headers})
-      .map(res => res.json());
+      // .map(res => res.json());
   }
 
   authenticateUser(user) {
@@ -26,7 +27,7 @@ export class AuthService {
     console.log(user);
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3060/user/authenticate', user, {headers: headers})
-      .map(res => res.json());
+      // .map(res => res.json());
   }
 
   getProfile() {
@@ -35,7 +36,7 @@ export class AuthService {
     headersProfile.append('Authorization', this.authToken);
     headersProfile.append('Content-Type', 'application/json');
     return this.http.get('http://localhost:3060/user/profile', {headers: headersProfile})
-      .map(res => res.json());
+      // .map(res => res.json());
   }
 
   storeUserData(token, user) {
